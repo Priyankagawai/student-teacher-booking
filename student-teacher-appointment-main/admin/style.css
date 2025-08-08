@@ -1,0 +1,290 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f3f0;
+  color: #3e2f25;
+}
+
+.admin-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #5d4037;
+  color: white;
+  width: 240px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  color: #ffccbc;
+}
+
+.sidebar nav {
+  width: 100%;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar nav li {
+  margin-bottom: 18px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #fce4ec;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar nav a:hover {
+  background-color: #8d6e63;
+  color: #fff;
+}
+
+.sidebar nav a.logout {
+  color: #ff8a65;
+}
+
+.sidebar nav a.logout:hover {
+  background-color: rgba(255, 138, 101, 0.2);
+  color: #fff;
+}
+
+/* Main Dashboard Area */
+.dashboard-main {
+  flex: 1;
+  padding: 40px;
+  background-color: #f9f5f2;
+  overflow-y: auto;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #7d5f50;
+  margin-bottom: 40px;
+}
+
+/* Quick Action Cards */
+.quick-actions {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 25px 30px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #4e342e;
+}
+
+.card a {
+  text-decoration: none;
+  background-color: #8d6e63;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #5d4037;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Form Container */
+.form-container {
+  max-width: 500px;
+  margin: 80px auto;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.form-container h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+  color: #5d4037;
+}
+
+.teacher-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #6d4c41;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #8d6e63;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5d4037;
+}
+
+.success-msg {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #388e3c;
+}
+
+/* Manage Teachers & Students Table */
+.manage-container,
+.table-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.manage-container h2,
+.table-container h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #4e342e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+}
+
+th {
+  background-color: #fbe9e7;
+  color: #5d4037;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #a1887f;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #6d4c41;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
